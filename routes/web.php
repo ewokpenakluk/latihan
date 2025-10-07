@@ -26,6 +26,11 @@ Route::get('/home', function () {
 // AKHIR DARI BARIS BARU
 // ===============================================
 
+// Halaman pemilihan metode pengiriman (antar ke rumah vs ambil di toko)
+Route::get('/pengiriman', function () {
+    return Inertia::render('Checkout/PilihMetodePengiriman');
+})->name('checkout.pengiriman');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
