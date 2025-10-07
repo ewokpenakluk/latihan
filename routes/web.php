@@ -14,17 +14,23 @@ Route::get('/', function () {
     ]);
 });
 
-// ===============================================
-// BARIS BARU DIMULAI DI SINI
-// ===============================================
+Route::get('/', function () {
+    return Inertia::render('Home');
+})->name('home');
+
+Route::get('/pilih-opsi', function () {
+    return Inertia::render('PilihOpsi');
+})->name('pilih-opsi');
 
 Route::get('/home', function () {
     return Inertia::render('Home');
-});
+})->name('home'); // Tambahkan nama untuk rute home
 
-// ===============================================
-// AKHIR DARI BARIS BARU
-// ===============================================
+// 👇 TAMBAHKAN RUTE BARU DI SINI 👇
+Route::get('/layanan', function () {
+    return Inertia::render('Layanan');
+})->name('layanan');
+// 👆 BATAS AKHIR RUTE BARU 👆
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
