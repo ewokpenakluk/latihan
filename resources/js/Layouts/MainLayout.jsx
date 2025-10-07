@@ -13,8 +13,9 @@ export default function MainLayout({ children }) {
       <header>
         <nav style={{ display: 'flex', gap: '20px', padding: '15px', backgroundColor: '#f0f0f0', borderBottom: '1px solid #ccc' }}>
           <Link href="/home">Home</Link>
-          <Link href="/about">About</Link> {/* Contoh link lain */}
-          <Link href="/contact">Contact</Link> {/* Contoh link lain */}
+          <Link href="/pengiriman">Pengiriman</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
       </header>
 
